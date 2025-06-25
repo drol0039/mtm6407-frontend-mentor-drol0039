@@ -67,7 +67,7 @@ body {
   
 .main-article {
   display: grid
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
   gap: 2rem;
 }
 
@@ -75,13 +75,14 @@ body {
   width: 100%;
   max-width: 600px;
   object-fit: cover;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .main-content {
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
 }
 
 .main-content h1 {
