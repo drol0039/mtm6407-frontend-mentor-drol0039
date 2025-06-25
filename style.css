@@ -60,16 +60,23 @@ body {
 /* Main Article */
 
 .main-article {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid
+  grid-template-columns: 1fr 2fr;
+  grid-column: span 2;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .main-image {
   width: 100%;
   max-width: 600px;
   object-fit: cover;
+}
+
+.main-content {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .main-content h1 {
@@ -101,11 +108,10 @@ body {
 
 /* Sidebar News  */
 
-.side-news {
+.sidebar {
   background-color: var(--very-dark-blue);
   color: var(--off-white);
   padding: 2rem 1.5rem;
-  margin-top: 2rem;
 }
 
 .side-news h2 {
@@ -130,18 +136,16 @@ body {
 
 /* Bottom Cards  */
 
-.bottom-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 3rem;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  grid-column: span 2;
 }
 
 .card {
   display: flex;
   gap: 1rem;
-  max-width: 300px;
 }
 
 .card img {
@@ -170,12 +174,16 @@ body {
 /* Responsive  */
 
 @media (max-width: 768px) {
-  .main-article {
-    flex-direction: column;
+  .grid-layout {
+    grid-template-columns: 1fr;
   }
 
-  .bottom-cards {
-    flex-direction: column;
+  .main-article {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
   }
 
   .hamburger {
