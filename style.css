@@ -55,14 +55,19 @@ body {
   display: none;
   cursor: pointer;
 }
-
+ 
 
 /* Main Article */
-
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: auto auto; */
+    gap: 2rem;
+  }
+  
 .main-article {
   display: grid
   grid-template-columns: 1fr 2fr;
-  grid-column: span 2;
   gap: 2rem;
 }
 
@@ -112,6 +117,8 @@ body {
   background-color: var(--very-dark-blue);
   color: var(--off-white);
   padding: 2rem 1.5rem;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .side-news h2 {
@@ -181,7 +188,10 @@ body {
   .main-article {
     grid-template-columns: 1fr;
   }
-
+  
+  .sidebar {
+    grid-column: 1 / -1;
+  }
   .cards {
     grid-template-columns: 1fr;
   }
