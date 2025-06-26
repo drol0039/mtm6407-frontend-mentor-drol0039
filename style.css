@@ -61,6 +61,7 @@ body {
 .nav-menu a:hover {
     color: var(--soft-red);
 }
+
 .hamburger,
 .close {
     font-size: 40px;
@@ -134,7 +135,7 @@ body {
 }
 
 .read-more:hover {
-  background-color: var(--very-dark-blue);
+  background-color: var(--soft-orange);
 }
 
 /* Sidebar News  */
