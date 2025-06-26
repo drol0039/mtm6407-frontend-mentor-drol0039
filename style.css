@@ -212,7 +212,7 @@ body {
 @media (max-width: 768px) {
     body {
         margin: 1rem;
-        padding: 1rem;
+        padding: 1.5rem;
       }
  /* Mobile Navigation */
     .navbar {
@@ -224,10 +224,11 @@ body {
         z-index: 1001;
       }
 
-      .hamburger.hidden {
+      /* .hamburger.hidden {
         display: none;
-      }
+      } */
 
+     
       .nav-menu {
         position: fixed;
         top: 0;
@@ -258,15 +259,25 @@ body {
 
       .close {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 24px;
         right: 24px;
-        font-size: 32px;
+        font-size: 90px;
         color: var(--dark-grayish-blue);
-        z-index: 1001;
+        z-index: 1002;
+        background: var(--off-white);
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
       }
 
-      .nav-menu.active .close {
+      .nav-menu.active + .hamburger {
+        display: none;
+      }
+
+      .nav-menu.active ~ .close {
         display: block;
       }
 
